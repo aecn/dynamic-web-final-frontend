@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
+import ImagePost from '../components/ImagePost';
 
 function FeedPage({ 
     isLoading, 
@@ -22,7 +23,14 @@ function FeedPage({
                 setUserInformation={setUserInformation} 
             />
             <div className="PageWrapper">
-                <p>Feed</p>
+                <h1>Feed / Landing Page</h1>
+                <div className="ImagePostWrapper">
+                    <ImagePost />
+                    <ImagePost />
+                    <ImagePost />
+                    <ImagePost />
+                    <ImagePost />
+                </div>
             </div>
         </>
     );       

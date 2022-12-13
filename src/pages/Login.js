@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import LoginForm from '../components/LoginForm';
-import Header from '../components/Header';
 
 function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
     const [errors, setErrors] = useState();
@@ -44,14 +44,10 @@ function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
 
     return (
         <>
-            <Header 
-                isLoggedIn={isLoggedIn} 
-                setIsLoggedIn={setIsLoggedIn} 
-                setUserInformation={setUserInformation} 
-            />
-            <div className="PageWrapper">
-                <h1>Login</h1>
+            <div className="PageWrapper LoginWrapper">
+                <h1 className="LoginLogo">Login to Share</h1>
                 <LoginForm loginUser={loginUser} />
+                <p className="BoldLoginText"><Link to="/create">Click here to create an account</Link></p>
                 <p>{errors}</p>
             </div>
         </>
