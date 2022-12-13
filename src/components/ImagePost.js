@@ -1,11 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function ImagePost({imageSrc, imageAlt, caption, location,userId, userName }){
+function ImagePost({
+    caption, 
+    imageUrl, 
+    imageAlt, 
+    location,
+    userId, 
+    userName 
+}){
     return (
         <div className="ImagePostWrapper">
         <div className="ImagePost">
-        <img src={imageSrc} alt={imageAlt} />
+        <img src={imageUrl} alt={imageAlt} />
             <div className="ImagePostText">
                 <p className="Caption">{caption}</p>
                 <p className="Location">{location}</p>

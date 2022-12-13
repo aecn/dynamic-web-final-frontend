@@ -30,8 +30,8 @@ function App() {
   // app is initialized when it is ready
   useEffect(() => {
     // initialize firebase
-    initializeApp(firebaseConfig);
-    setAppInitialized(true);
+    const app = initializeApp(firebaseConfig);
+    setAppInitialized(app);
   }, []);
   // checks if user is logged in
   // user loads page, check their status
@@ -55,13 +55,12 @@ function App() {
     }
   }, [appInitialized]);
 
-  console.log({ userInformation });
-
   const router = createBrowserRouter([
     {
       path: "/",
       element: 
-      <FeedPage 
+      <FeedPage
+        app={appInitialized} 
         isLoggedIn={isLoggedIn}
         isLoading={isLoading}
         userInformation={userInformation}
@@ -81,14 +80,24 @@ function App() {
       />,
     },
     {
+      path: "/create",
+      element: 
+        <CreateUserPage
+          isLoggedIn={isLoggedIn}
+          setIsLoggedIn={setIsLoggedIn}
+          setUserInformation={setUserInformation}
+        />,
+    },
+    {
       path: "/createpost",
       element: 
       <CreatePostPage 
+        app={initializeApp}
         isLoggedIn={isLoggedIn}
         isLoading={isLoading}
-        userInformation={userInformation}
         setIsLoggedIn={setIsLoggedIn}
         setUserInformation={setUserInformation} 
+        userInformation={userInformation}
       />,
     },
     {
@@ -110,15 +119,6 @@ function App() {
         setIsLoggedIn={setIsLoggedIn}
         setUserInformation={setUserInformation} 
       />,
-    },
-    {
-      path: "/create",
-      element: 
-        <CreateUserPage
-          isLoggedIn={isLoggedIn}
-          setIsLoggedIn={setIsLoggedIn}
-          setUserInformation={setUserInformation}
-        />,
     },
   ]);
 
