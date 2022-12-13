@@ -10,7 +10,11 @@ const queryData = async (app) => {
   const querySnapshot = await getDocs(collection(db, "posts"));
   const data = [];
   querySnapshot.forEach((doc) => {
-    data.push(doc.data());
+    const dataToPush = doc.data();
+    // update image url to include full url from firebase /
+    // change image url before pushing it into data
+    // dataToPush.imageUrl = "hi";
+    data.push(dataToPush);
   });
   return data;
 };

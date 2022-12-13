@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { getStorage, ref, uploadBytes } from "firebase/storage";
 import Header from '../components/Header';
 import CreatePostForm from '../components/CreatePostForm';
 
@@ -18,20 +19,34 @@ function CreatePostPage({
         async (e) => {
             e.preventDefault();
             const db = getFirestore(app);
+            const storage = getStorage();
 
-            /*image url*/
+            // text
             const caption = e.currentTarget.caption.value;
-            const imageAlt = e.currentTarget.imageAlt.value;
-            const imageUrl = "";
             const location = e.currentTarget.location.value;
+
+            // images
+            const imageToUpload = e.currentTarget.imageToUpload.files[0];
+            const imageAlt = e.currentTarget.imageAlt.value;
+            const imageRef = ref(storage, imageToUpload.name);
+            //const imageUrl = e.currentTarget.imageToUpload.files[0];
+
+            // user
             const userName = userInformation.displayName;
             const userId = userInformation.uid;
 
             try {
+                const imageUpload = await uploadBytes(imageRef, imageToUpload).then(
+                    (snapshot) => {
+                    console.log("Uploaded a blob or file!", snapshot);
+                    return snapshot;
+                    }
+                );
+
                 const docRef = await addDoc(collection(db, "posts"), {
                     caption,
                     imageAlt,
-                    imageUrl,
+                    imageUrl: imageUpload.metadata.fullPath,
                     location,
                     userName,
                     userId: userId,
