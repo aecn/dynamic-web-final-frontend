@@ -25,7 +25,13 @@ function FeedPage({
             <div className="PageWrapper">
                 <h1>Feed / Landing Page</h1>
                 <div className="ImagePostWrapper">
-                    <ImagePost />
+                    <ImagePost 
+                        location="name, place"
+                        imageAlt=""
+                        imageSrc="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                        caption="yummy"
+                        userName="The One"
+                    />
                     <ImagePost />
                     <ImagePost />
                     <ImagePost />
