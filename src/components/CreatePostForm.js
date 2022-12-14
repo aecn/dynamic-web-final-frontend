@@ -3,20 +3,14 @@ import React from "react";
 function CreatePostForm({ createPost }) {
   return (
     <form className="FormElement" onSubmit={(e) => createPost(e)}>
-        <label for="imageToUpload">Upload Your Image</label>
-        <input type="file" name="imageToUpload" 
-        accept="image/png, image/jpeg, image/jpg, image/gif"></input>
+      <label htmlFor="location">Location</label>
+      <input type="text" name="location" />
+      <label htmlFor="review">Review</label>
+      <input type="text" name="review" />
+      <label htmlFor="rating">Rating</label>
+      <input type="text" name="rating" />
 
-        <label htmlFor="caption">Caption</label>
-        <input type="text" name="caption" />
-        <label htmlFor="location">Location</label>
-        <input type="text" name="location" />
-        <label htmlFor="imageAlt">Image Alt Text</label>
-        <input type="text" name="imageAlt" />
-
-      <button type="submit" className="Button">
-        Submit
-      </button>
+      <button type="submit" className="Button">Submit</button>
     </form>
   );
 }

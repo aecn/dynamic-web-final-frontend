@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import LoginForm from '../components/LoginForm';
+import LoginHeader from '../components/LoginHeader';
 
 function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
     const [errors, setErrors] = useState();
@@ -42,6 +43,7 @@ function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
 
     return (
         <>
+            <LoginHeader />
             <div className="PageWrapper LoginWrapper">
                 <h1 className="LoginLogo">Login to Share</h1>
                 <LoginForm loginUser={loginUser} />

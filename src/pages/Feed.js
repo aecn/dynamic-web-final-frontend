@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import Header from "../components/Header";
-import ImagePost from "../components/ImagePost";
+import Post from "../components/Post";
 
 const queryData = async (app) => {
   if (!app) return [];
@@ -11,9 +11,6 @@ const queryData = async (app) => {
   const data = [];
   querySnapshot.forEach((doc) => {
     const dataToPush = doc.data();
-    // update image url to include full url from firebase /
-    // change image url before pushing it into data
-    // dataToPush.imageUrl = "hi";
     data.push(dataToPush);
   });
   return data;
@@ -46,14 +43,13 @@ function FeedPage({
         setUserInformation={setUserInformation}
       />
       <div className="PageWrapper">
-        <h1>Feed / Landing Page</h1>
-        <div className="ImagePostWrapper">
+        <h1>Popular Reviews</h1>
+        <div className="PostWrapper">
           {postData.map((post) => (
-            <ImagePost
-              caption={post.caption}
+            <Post
               location={post.location}
-              imageAlt={post.imageAlt}
-              imageUrl={post.imageUrl}
+              rating={post.rating}
+              review={post.review}
               userId={post.userId}
               userName={post.userName}
             />

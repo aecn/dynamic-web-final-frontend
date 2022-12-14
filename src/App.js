@@ -8,7 +8,6 @@ import CreatePostPage from "./pages/CreatePost";
 import CreateUserPage from "./pages/CreateUser";
 import FeedPage from "./pages/Feed";
 import LoginPage from "./pages/Login";
-import SearchPage from "./pages/Search";
 import UserProfilePage from "./pages/UserProfile";
 
 //import Header from "./components/Header";
@@ -98,17 +97,6 @@ function App() {
         setIsLoggedIn={setIsLoggedIn}
         setUserInformation={setUserInformation} 
         userInformation={userInformation}
-      />,
-    },
-    {
-      path: "/search",
-      element: 
-      <SearchPage 
-        isLoggedIn={isLoggedIn}
-        isLoading={isLoading}
-        userInformation={userInformation}
-        setIsLoggedIn={setIsLoggedIn}
-        setUserInformation={setUserInformation} 
       />,
     },
     {
