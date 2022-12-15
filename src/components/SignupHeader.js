@@ -1,24 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { getAuth, signOut } from "firebase/auth";
 
-function SignupHeader({ setIsLoggedIn, setUserInformation }) {
-  function logout() {
-    const auth = getAuth();
-    signOut(auth)
-      .then(() => {
-        setUserInformation({});
-        setIsLoggedIn(false);
-      })
-      .catch((error) => {
-        console.warn(error);
-      });
-  }
-
+function SignupHeader() {
   return (
-    <div className="LoginHeader">
+    <div className="LSHeader">
       <p className="Logo">
-        <Link to="/">explored</Link>
+        <Link to="/"></Link>
       </p>
       <p className="Logo">
         <Link to="/login">Log In</Link>

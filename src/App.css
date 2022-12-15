@@ -81,7 +81,6 @@
   }
 
   .Header .Logo {
-    flex-shrink: 0;
     font-size: 16px;
     font-weight: bolder;
     height: 16px;
@@ -94,27 +93,18 @@
     text-decoration: none;
   }
 
-  .ImagePostWrapper {
+  .PostWrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
 
-  .ImagePost {
+  .Post {
     border: 1px solid black;
     margin-bottom: 40px;
     max-width: 300px;
     min-height: 300px;
     width: 100%;
-  }
-
-  .ImagePost img {
-    height: auto;
-    width: 100%;
-  }
-
-  .ImagePostText {
-    padding: 25px;
   }
 
   .CreatePostWrapper {
@@ -125,3 +115,27 @@
     min-height: 100vh;
     padding: 20px;  
   }
+
+.LSHeader {
+  font-size: 16px;
+  font-weight: bolder;
+  height: 16px;
+  line-height: 16px;
+  margin: auto;
+  border-bottom: 1px solid black;
+  display: flex;
+  padding: 25px;
+}
+
+.LSHeader nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 100%;
+}
+
+.Logo {
+  font-family: 'Lobster', cursive;
+}
