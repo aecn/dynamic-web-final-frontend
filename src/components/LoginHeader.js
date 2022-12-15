@@ -5,10 +5,10 @@ function LoginHeader() {
   return (
     <div className="LSHeader">
       <nav>
-      <p className="Logo">
-        <Link to="/">explored</Link>
-      </p>
-        <Link to="/create">Sign Up</Link>
+        <p className="Logo">
+          <Link to="/">explored</Link>
+        </p>
+        <p><Link to="/create">Sign Up</Link></p>
       </nav>
     </div>
   );

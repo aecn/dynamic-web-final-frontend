@@ -69,6 +69,7 @@ function CreateUserPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
         <CreateUserForm signUpUser={signUpUser} />
         <p className="BoldLoginText">
           <Link to="/login">Already have an account? Log in here</Link>
+          
         </p>
         <p>{errors}</p>
       </div>

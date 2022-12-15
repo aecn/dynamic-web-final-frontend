@@ -45,7 +45,7 @@ function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
         <>
             <LoginHeader />
             <div className="PageWrapper LoginWrapper">
-                <h1 className="LoginLogo">Login to Share</h1>
+                <h1 className="LoginLogo">Log in to start!</h1>
                 <LoginForm loginUser={loginUser} />
                 <p className="BoldLoginText"><Link to="/create">Click here to create an account</Link></p>
                 <p>{errors}</p>

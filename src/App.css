@@ -1,128 +1,138 @@
 .FormElement {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .FormElement input {
-    appearance: none;
-    background-color: #ececec;
-    border: 1px solid #000000;
-    border-radius: 8px;
-    font-size: 12px;
-    font-weight: 600;
-    max-width: 300px;
-    padding: 8px 4px;
+  appearance: none;
+  background-color: #e9f0ee;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  max-width: 400px;
+  padding: 10px;
 }
 
 .FormElement label {
-    font-size: 18px;
-    font-weight: 800;
-    margin-bottom: 4px;
-    margin-top: 32px;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 5px;
+  margin-top: 40px;
 }
 
 .LoginLogo {
-    font-size: 36px;
-    font-weight: bolder;
-    line-height: 48px;
-    margin: 0;
+  font-size: 30px;
+  font-weight: bolder;
+  line-height: 48px;
+  margin: 0;
 }
 
 .PageWrapper {
   margin: 0 auto;
   max-width: 740px;
+  font-family: Futura;
 }
 
 .Button {
-    appearance: none;
-    border-radius: 8px;
-    font-size: 18px;
-    line-height: 48px;
-    margin-top: 20px;
-    width: 100px;
+  appearance: none;
+  background-color: #6D9774;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  line-height: 48px;
+  margin-top: 20px;
+  width: 100px;
+  border: none;
+  font-weight: 600;
 }
 
 .BoldLoginText a {
-    color: #F3A712;
-    margin: 0px;
+  font-weight: 800;
+  color:#0E3A2D;
+  margin: 0px;
+  text-decoration: none;
+}
+
+.BoldLoginText a:hover {
+  color: #6D9674;
 }
 
 .LoginWrapper {
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 350px;
-    min-height: 100vh;
-    padding: 20px;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 350px;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .Header {
-    border-bottom: 1px solid black;
-    display: flex;
-    padding: 25px;
-  }
-  
-  nav {
-    align-items: center;
-    display: flex;
-    justify-content: flex-end;
-    margin: 0 auto;
-    max-width: 1080px;
-    width: 100%;
-  }
-  
-  nav p {
-    color: black;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 0 40px 0 0;
-  }
+  background-color: #3E5556;
+  display: flex;
+  padding: 25px;
+}
 
-  .Header .Logo {
-    font-size: 16px;
-    font-weight: bolder;
-    height: 16px;
-    line-height: 16px;
-    margin: auto;
-  }
+nav {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 100%;
+}
 
-  nav p a {
-    color: black;
-    text-decoration: none;
-  }
+nav p {
+  font-size: 16px;
+  margin: 0 40px 0 0;
+}
 
-  .PostWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
+.Header .Logo {
+  font-size: 30px;
+  font-weight: bolder;
+  height: 16px;
+  line-height: 16px;
+  margin: auto;
+}
 
-  .Post {
-    border: 1px solid black;
-    margin-bottom: 40px;
-    max-width: 300px;
-    min-height: 300px;
-    width: 100%;
-  }
+nav p a {
+  text-decoration: none;
+}
 
-  .CreatePostWrapper {
-    display: flex;
-    align-content: center;
-    margin: 0 auto;
-    max-width: 350px;
-    min-height: 100vh;
-    padding: 20px;  
-  }
+.PostWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Post {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  min-width: 500px;
+  max-height: 500px;
+  width: 100%;
+  padding: 20px;
+}
+
+.CreatePostWrapper {
+  display: flex;
+  align-content: center;
+  margin: 0 auto;
+  max-width: 350px;
+  min-height: 100vh;
+  padding: 20px;
+}
 
 .LSHeader {
+  background-color: #0E3A2D;
   font-size: 16px;
   font-weight: bolder;
   height: 16px;
   line-height: 16px;
   margin: auto;
-  border-bottom: 1px solid black;
   display: flex;
   padding: 25px;
 }
@@ -137,5 +147,8 @@
 }
 
 .Logo {
+  color: #6D9774;
   font-family: 'Lobster', cursive;
+  font-size: 30px;
 }
+
