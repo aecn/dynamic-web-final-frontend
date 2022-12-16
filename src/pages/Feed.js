@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import Header from "../components/Header";
 import Post from "../components/Post";
+import Image from "../images/earth.png";
 
 const queryData = async (app) => {
   if (!app) return [];
@@ -45,6 +46,7 @@ function FeedPage({
       <div className="PageWrapper">
         <h1>Popular Reviews</h1>
         <div className="PostWrapper">
+        <img src={Image} width="200px" height="205px"></img>
           {postData.map((post) => (
             <Post
               location={post.location}

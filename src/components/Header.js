@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
-import Image from "./images/search.png";
+import Image from "../images/search.png";
 
 function Header({ setIsLoggedIn, setUserInformation }) {
   function logout() {

@@ -6,11 +6,11 @@ function Post({ location, rating, review, userId, userName }) {
     <div className="PostWrapper">
       <div className="Post">
         <div className="PostText">
-          <p className="Location">{location}</p>
-          <p className="Review">{review}</p>
-          <p className="Rating">{rating}</p>
+          <p className="Location"><strong>Where?</strong> {location}</p>
+          <p className="Review"><strong>Review:</strong> {review}</p>
+          <p className="Rating"><strong>Rating:</strong> {rating}</p>
           <p>
-            Posted by: <Link to={`user/${userId}`}>{userName}</Link>
+            <strong>By</strong> <Link to={`user/${userId}`}>{userName}</Link>
           </p>
         </div>
       </div>
