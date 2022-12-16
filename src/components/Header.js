@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
+import Image from "./images/search.png";
 
 function Header({ setIsLoggedIn, setUserInformation }) {
   function logout() {
@@ -21,7 +22,12 @@ function Header({ setIsLoggedIn, setUserInformation }) {
         <Link to="/">explored</Link>
       </p>
       <nav>
-        <p>search bar</p>
+
+        <form className="SearchBar">
+          <input type="text" placeholder=" Search Locations..." name="search"></input>
+          <button type="submit"><img src={Image} width="24px" height="24px"></img></button>
+        </form>
+
         <button className="Button">
           <Link to="/createpost">+</Link>
         </button>

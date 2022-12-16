@@ -1,3 +1,36 @@
+.App {
+  background-color: 
+}
+.CreatePostForm .FormElement input {
+  background-color: #E9E9E9;
+  border: 3px solid black;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+}
+
+.CreatePostForm .FormElement .location input {
+  width: 600px;
+  margin: 20px;
+}
+
+.CreatePostForm .FormElement .rating input {
+  width: 20px;
+  margin: 20px;
+}
+
+.CreatePostForm .FormElement .review input {
+  width: 600px;
+  height: 200px;
+  margin: 20px;
+}
+
+.CreatePostForm .FormElement {
+  display: flex;
+  align-content: center;
+}
+
 .FormElement {
   display: flex;
   flex-direction: column;
@@ -6,7 +39,7 @@
 
 .FormElement input {
   appearance: none;
-  background-color: #e9f0ee;
+  background-color: #E9E9E9;
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -34,29 +67,50 @@
   max-width: 740px;
   font-family: Futura;
 }
+.CreatePostWrapper .Button {
+    appearance: none;
+    background-color: #fff36e;
+    border-radius: 8px;
+    border: 3px solid black;
+    color: black;
+    font-size: 18px;
+    line-height: 48px;
+    width: 100px;
+    font-weight: 600; 
+    margin-top: 24px;
+}
 
-.Button {
+.CreatePostWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.Header .Button {
   appearance: none;
-  background-color: #6D9774;
+  background-color: #F4E107;
   border-radius: 8px;
-  color: white;
+  color: black;
   font-size: 18px;
   line-height: 48px;
-  margin-top: 20px;
-  width: 100px;
+  height: 48px;
+  width: 48px;
   border: none;
   font-weight: 600;
 }
 
+.Button:hover {
+  background-color: #fff9b6;
+}
+
 .BoldLoginText a {
   font-weight: 800;
-  color:#0E3A2D;
+  color: black;
   margin: 0px;
   text-decoration: none;
 }
 
 .BoldLoginText a:hover {
-  color: #6D9674;
+  color: #767676;
 }
 
 .LoginWrapper {
@@ -70,14 +124,24 @@
 }
 
 .Header {
-  background-color: #3E5556;
+  background-color: black;
   display: flex;
-  padding: 25px;
+  padding: 10px;
+}
+
+.Header a {
+  text-decoration: none;
+}
+
+.Header .Button a {
+  color: black;
+  text-decoration: none;
 }
 
 nav {
   align-items: center;
   display: flex;
+  font-weight: 600;
   justify-content: flex-end;
   margin: 0 auto;
   max-width: 1080px;
@@ -85,8 +149,10 @@ nav {
 }
 
 nav p {
-  font-size: 16px;
-  margin: 0 40px 0 0;
+  color: white;
+  font-size: 18px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .Header .Logo {
@@ -98,6 +164,7 @@ nav p {
 }
 
 nav p a {
+  color: white;
   text-decoration: none;
 }
 
@@ -108,7 +175,8 @@ nav p a {
 }
 
 .Post {
-  border: 1px solid black;
+  background-color: white;
+  border: 3px solid black;
   border-radius: 8px;
   margin-bottom: 40px;
   min-width: 500px;
@@ -118,16 +186,14 @@ nav p a {
 }
 
 .CreatePostWrapper {
+  align-items: center;
   display: flex;
-  align-content: center;
-  margin: 0 auto;
-  max-width: 350px;
-  min-height: 100vh;
   padding: 20px;
+  margin: 0 auto;
 }
 
 .LSHeader {
-  background-color: #0E3A2D;
+  background-color: black;
   font-size: 16px;
   font-weight: bolder;
   height: 16px;
@@ -135,6 +201,10 @@ nav p a {
   margin: auto;
   display: flex;
   padding: 25px;
+}
+
+.LSHeader a {
+  color: white;
 }
 
 .LSHeader nav {
@@ -146,9 +216,32 @@ nav p a {
   width: 100%;
 }
 
-.Logo {
-  color: #6D9774;
+.Logo a {
+  color: white;
   font-family: 'Lobster', cursive;
   font-size: 30px;
 }
 
+.SearchBar {
+  display: flex;
+  margin: 20px;
+}
+
+.SearchBar input {
+  border: none;
+  border-radius: 8px;
+  height: 24px;
+}
+
+.SearchBar button {
+  background-color: black;
+  border: none;
+}
+
+.SearchBar img {
+  align-self: center;
+}
+
+h1 {
+  text-align: center;
+}

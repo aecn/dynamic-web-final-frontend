@@ -53,9 +53,8 @@ function CreatePostPage({
         setIsLoggedIn={setIsLoggedIn}
         setUserInformation={setUserInformation}
       />
-
       <div className="PageWrapper CreatePostWrapper">
-        <p>Create Post</p>
+      <h1>Add A Review</h1>
         <CreatePostForm createPost={createPost} />
         {postSuccessful && <p>Successfully Posted!</p>}
       </div>
