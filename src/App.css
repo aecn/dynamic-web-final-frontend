@@ -263,3 +263,9 @@ h1 {
 .PostWrapper img {
   margin-bottom: 40px;
 }
+
+.PostSuccess {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
