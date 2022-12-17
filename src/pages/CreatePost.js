@@ -55,10 +55,10 @@ function CreatePostPage({
       />
       <div className="PageWrapper CreatePostWrapper">
       <h1>Add A Review</h1>
-        <CreatePostForm createPost={createPost} />
-        <div className="PostSuccess">
-        {postSuccessful && <p>Successfully Posted!</p>}
+      <div className="PostSuccess">
+        {postSuccessful && <p>Successfully Posted!✔️</p>}
         </div>
+        <CreatePostForm createPost={createPost} />
       </div>
     </>
   );

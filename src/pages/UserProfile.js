@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
-import Post from "../components/Post";
+import Image from "../images/city.webp";
 
 const queryData = async (app) => {
   if (!app) return [];
@@ -58,14 +58,11 @@ function UserProfilePage({
           <strong>Email: </strong>
           {userInformation.email}
         </p>
+        <p>
+          <strong>My Likes:</strong> 0 💛
+        </p>
 
-        {postData.map((post) => (
-          <Post
-            location={post.location}
-            rating={post.rating}
-            review={post.review}
-          />
-        ))}
+        <img src={Image} width="800px"></img>
       </div>
     </>
   );

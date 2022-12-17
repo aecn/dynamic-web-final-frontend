@@ -148,6 +148,7 @@
 }
 
 .Header .Button a {
+  cursor: pointer;
   color: black;
   text-decoration: none;
 }
@@ -163,10 +164,15 @@ nav {
 }
 
 nav p {
-  color: white;
+  color: #F4E107;
+  cursor: pointer;
   font-size: 18px;
   margin-left: 40px;
   margin-right: 40px;
+}
+
+nav p:hover {
+  color: white;
 }
 
 .Header .Logo {
@@ -178,6 +184,11 @@ nav p {
 }
 
 nav p a {
+  color: #F4E107;
+  text-decoration: none;
+}
+
+nav p a:hover {
   color: white;
   text-decoration: none;
 }
@@ -218,6 +229,10 @@ nav p a {
 }
 
 .LSHeader a {
+  color: #F4E107;
+}
+
+.LSHeader a:hover {
   color: white;
 }
 
@@ -231,9 +246,13 @@ nav p a {
 }
 
 .Logo a {
-  color: white;
+  color: #F4E107;
   font-family: 'Lobster', cursive;
   font-size: 30px;
+}
+
+.Logo a:hover {
+  color: white;
 }
 
 .SearchBar {
@@ -268,4 +287,16 @@ h1 {
   display: flex;
   margin: 0;
   padding: 0;
+}
+
+.Post button {
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Post button:hover {
+  cursor: pointer;
+  background-color: white;
 }
