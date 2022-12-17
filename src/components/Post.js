@@ -1,25 +1,18 @@
-import React, { setState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Post({
-  increment,
   location,
   rating,
   review,
   userId,
   userName,
-  state,
 }) {
 
-  state = {
-    likes: 100
-  };
+  const [count, setCount] = useState(0);
 
-  increment = () => {
-    let newCount = state.likes + 1;
-      setState({
-      likes: newCount,
-    });
+  const incrementCount = () => {
+    setCount(count + 1);
   };
 
   return (
@@ -39,7 +32,7 @@ function Post({
             <strong>By</strong> <Link to={`user/${userId}`}>{userName}</Link>
           </p>
         </div>
-        <button onClick={increment}> {state.likes} 💛 </button>
+        <button onClick={incrementCount}> {count} 💛 </button>
       </div>
     </div>
   );
